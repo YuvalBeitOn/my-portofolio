@@ -13,8 +13,8 @@ gProjs = [{
     },
     {
         id: "bookShop",
-        name: "Book-Shop",
-        title: "book-shop use CRUDL",
+        name: "Book Shop",
+        title: "Online book shop",
         desc: makeLorem(),
         url: "projs/bookShop",
         publishedAt: '06/10/20',
@@ -24,8 +24,8 @@ gProjs = [{
     },
     {
         id: "drinksShop",
-        name: "Drinks-Shop",
-        title: "Drinks-shop site use Bootstrap",
+        name: "Drinks Shop",
+        title: "Online drinks shop use Bootstrap",
         desc: makeLorem(),
         url: "projs/drinksShop",
         publishedAt: '08/10/20',
@@ -58,7 +58,7 @@ gProjs = [{
     {
         id: "ball-board",
         name: "Ball-Board",
-        title: "Ball-Board game",
+        title: "A simple Ball-board game",
         desc: makeLorem(),
         url: "projs/ball-board",
         publishedAt: '03/10/20',

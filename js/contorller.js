@@ -5,7 +5,6 @@ function initPage() {
     renderModals();
 }
 
-
 function renderProjs(gProjs) {
     var projs = getProjs();
     var strHtml = '';
@@ -23,6 +22,7 @@ function renderProjs(gProjs) {
     <div class="portfolio-caption">
         <h4>${proj.name}</h4>
         <p class="text-muted">${proj.title}</p>
+        <span class="labels"> ${proj.labels.join(' | ')} </span>
     </div>
 </div> 
         `
@@ -45,35 +45,39 @@ function renderModals() {
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            ${proj.desc}
                             <h2>${proj.name}</h2>
                             <p class="item-intro text-muted">${proj.desc}.</p>
-                            <img class="img-fluid d-block mx-auto" src="img/${proj.img}" alt="">
-                            <p>${makeLorem()}</p>
+                            <img style="height: 100%;" class="img-fluid d-block mx-auto" src="img/${proj.img}" alt="">
                             <ul class="list-inline">
                                 <li>Date: ${proj.publishedAt}</li>
-                                <li>Client:</li>
+                                <li>Client: Coding Academy</li>
                                 <li>Category: ${proj.labels.join(' | ')}</li>
+                                <a class="git-btn" href="${proj.git}"><i class="fab fa-git-square fa-3x"></i></a>
                             </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button">             
-                <i class="fa fa-times"></i>
-                Close Project</button>
-                <a class="btn btn-primary" href="${proj.git}" role="button"><img style="width: 40px" src="img/github.png" alt=""></i></a>
+
+                            <button style="font-size: 15px" class="btn btn-primary" data-dismiss="modal" type="button"><i class="fa fa-times"></i> Close Project</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 </div> `;
     });
     var currModal = document.querySelector('.modalss')
     currModal.innerHTML = strHtmls.join('');
 }
 
+
 function sendEmail() {
-    var elMail = document.getElementById('exampleInputEmail').value;
-    var elSubject = document.getElementById('exampleInputSubject').value;
-    var elMessage = document.getElementById('exampleInputMessageBody').value;
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${'yuvalbeiton@gmail.com'}&su=${elSubject}&body=${elMessage + '\n' + elMail}`);
+    var elMail = document.getElementById('inputEmail').value;
+    var elSubject = document.getElementById('inputSubject').value;
+    var elMessage = document.getElementById('inputMessageBody').value;
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${'yuvalbeiton@gmail.com'}&su=${elSubject}&body=${elMessage}%0D%0A${elMail}`);
 }
+
+// git add
+// git commit
+// git push
+
+//gitIgnore
