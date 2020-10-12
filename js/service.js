@@ -1,10 +1,8 @@
-// array og projects
-
 gProjs = [{
         id: "minesweeper",
         name: "Minesweeper",
-        title: "My version of minesweeper game", // ?
-        desc: makeLorem(), // תיאור יותר ארוך של הפרוייקט
+        title: "My version of minesweeper game",
+        desc: makeLorem(),
         url: "projs/minesweeper",
         publishedAt: '03/10/20',
         labels: ["Matrixes", "keyboard events"],

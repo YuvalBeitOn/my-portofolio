@@ -1,5 +1,3 @@
-// render modals, and proj
-
 function initPage() {
     renderProjs();
     renderModals();
@@ -64,7 +62,7 @@ function renderModals() {
     </div> 
 </div> `;
     });
-    var currModal = document.querySelector('.modalss')
+    var currModal = document.querySelector('.modals-container')
     currModal.innerHTML = strHtmls.join('');
 }
 
@@ -75,9 +73,3 @@ function sendEmail() {
     var elMessage = document.getElementById('inputMessageBody').value;
     window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${'yuvalbeiton@gmail.com'}&su=${elSubject}&body=${elMessage}%0D%0A${elMail}`);
 }
-
-// git add
-// git commit
-// git push
-
-//gitIgnore
