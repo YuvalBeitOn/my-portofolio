@@ -25,7 +25,7 @@ function renderProjs(gProjs) {
 </div> 
         `
     });
-    document.querySelector('.first-modal').innerHTML = strHtml;
+    document.querySelector('.projects').innerHTML = strHtml;
 }
 
 function renderModals() {
